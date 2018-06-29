@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Registration form!
+  </h1>
+</div>
+<div>
+  Enter Your First Name: <input type="text" [(ngModel)]="firstName">
+  <br><br>
+  Enter Your First Name: <input type="text" [(ngModel)]="lastName" required="required">
+  <br><br>
+  Address 1: <input type="text" [(ngModel)]="addressLine1">
+  <br><br>
+  Address 2: <input type="text" [(ngModel)]="addressLine2">
+  <br><br>
+  <app-country>Loading....</app-country>
+  <br><br>
+  <app-state></app-state>
+</div>
+<div>
+  <br>
+  <button (click)="myFunction()">Display Form</button>
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>
+<div *ngIf="divDisplay">
+  The auto generated form:
+  <br><hr>
+  <div id="name" *ngIf="firstName && lastName">Your Full Name: {{firstName}} {{lastName}}</div>
+  <Br>
+  <div id="address" *ngIf="addressLine1">Address: {{addressLine1}}, {{addressLine2}}</div>
+</div>
